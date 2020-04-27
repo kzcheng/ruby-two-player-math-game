@@ -5,22 +5,21 @@ require "./game.rb"
 require "./player.rb"
 require "./question.rb"
 
-# pp Player.total_number_of_players
+def test
+  # pp Player.total_number_of_players
 
-Akira = Player.new("Akira", 8)
-Player.new("Bad guys", 8)
-Player.new("Bad guys", 8)
-Player.new("Bad guys", 8)
-Player.new("Bad guys", 8)
+  p1 = Player.new("p1", 1)
+  p2 = Player.new("p2", 1)
+  p3 = Player.new("p3", 1)
+  p4 = Player.new("p4", 1)
+  p5 = Player.new("p5", 1)
 
-pp Player.list
+  pp Player.list
 
-pp Player.kill(Akira)
-pp Player.list
+  pp p1.next
 
-# pp Question.new
+  # pp Question.new
+end
 
-#
-#
-# Main Game Below
-# game
+# test
+game

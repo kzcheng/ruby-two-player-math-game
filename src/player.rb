@@ -9,15 +9,38 @@ class Player
     @@list.push(self)
   end
 
-  def self.total_number_of_players
-    return @@list.length
-  end
-
   def self.list
     return @@list
   end
 
   def self.kill(player)
     @@list.delete(player)
+  end
+
+  def self.remaining_player_count
+    return @@list.length
+  end
+
+  def self.show_last_player
+    last = @@list[0]
+    return "#{last.name} wins the game with a score of #{last.remaining_life}/#{last.max_life}"
+  end
+
+  def self.show_score_board
+    rs = "| "
+    @@list.each do |player|
+      rs += "#{player.name}: #{player.remaining_life}/#{player.max_life} | "
+    end
+    return rs.strip
+  end
+
+  # Returns the next player object
+  def next
+    index = @@list.index(self)
+    if (!index)
+      raise "ERROR: Can't find given player"
+    end
+
+    return index + 1 < @@list.length ? @@list[index + 1] : @@list[0]
   end
 end
