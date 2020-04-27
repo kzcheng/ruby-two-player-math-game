@@ -1,10 +1,11 @@
 Nouns
-- Game
+<!-- - Game
   - Current Player
-  - Game loop
+  - Game loop -->
+- Main Game
   
 - Player
   - Remaining Life
-  
+
 - Question
   - 
