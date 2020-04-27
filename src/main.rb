@@ -22,4 +22,5 @@ def test
 end
 
 # test
-Game.new(["Alice", "Bob", "Charlie"], 3)
+# Game.new(["Alice", "Bob", "Charlie"], 3)
+Game.new(["Player 1", "Player 2"], 3)
