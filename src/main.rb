@@ -6,7 +6,7 @@ require "./player.rb"
 require "./question.rb"
 
 def test
-  # pp Player.total_number_of_players
+  pp Player.total_number_of_players
 
   p1 = Player.new("p1", 1)
   p2 = Player.new("p2", 1)
@@ -18,7 +18,7 @@ def test
 
   pp p1.next
 
-  # pp Question.new
+  pp Question.new
 end
 
 # test
