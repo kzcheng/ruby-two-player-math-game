@@ -22,4 +22,4 @@ def test
 end
 
 # test
-game
+Game.new(["Alice", "Bob", "Charlie"], 3)

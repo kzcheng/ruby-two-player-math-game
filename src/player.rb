@@ -47,4 +47,11 @@ class Player
 
     return index + 1 < @@list.length ? @@list[index + 1] : @@list[0]
   end
+
+  def check_die
+    if (self.remaining_life <= 0)
+      puts "#{self.name} is eliminated!"
+      self.kill
+    end
+  end
 end
