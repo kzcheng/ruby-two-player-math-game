@@ -13,10 +13,6 @@ class Player
     return @@list
   end
 
-  def self.kill(player)
-    @@list.delete(player)
-  end
-
   def self.remaining_player_count
     return @@list.length
   end
@@ -32,6 +28,14 @@ class Player
       rs += "#{player.name}: #{player.remaining_life}/#{player.max_life} | "
     end
     return rs.strip
+  end
+
+  def kill
+    @@list.delete(self)
+  end
+
+  def hit
+    self.remaining_life -= 1
   end
 
   # Returns the next player object
